@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -56,9 +57,6 @@ body > * {
     position: relative;
     z-index: 1;
 }
-
-
-
 
 .eyebrow {
     margin: 25px 5%;
@@ -139,38 +137,51 @@ body > * {
     transform: scale(.97);
 }
 
-
 .features {
     max-width: 1100px;
-    margin: 150px auto;
+    margin: 150px auto 80px;
     padding: 0 25px;
+}
+
+.main-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
 }
 
 .feature-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 18px;
     align-items: center;
-    background: #151713;
+    background: linear-gradient(135deg, #1a2211, #171915);
     border: 1px solid #ffffff12;
     border-radius: 15px;
     padding: 12px;
     margin-bottom: 25px;
-    transition: .3s ease;
+    transition: .2s ease;
 }
 
-.feature-main:nth-child(even) .feature-content{
-    order: 2;
+.feature-main:first-child {
+    grid-column: 1 / -1;
 }
 
-.feature-main:nth-child(even)  .feature-content{
-    order: 1;
+.feature-main:first-child .feature-content {
+    padding: 35px;
 }
 
+.feature-main:not(:first-child) {
+    grid-template-columns: 1fr;
+}
 
+.feature-main:not(:first-child) .feature-image {
+    height: 200px;
+    min-height: 200px;
+}
 
 .feature-main:hover {
-    border-color: #b5ed4540;
+    border-color: rgb(7, 187, 43);
+    box-shadow: 0 10px 40px #1d2a0b10;
 }
 
 .feature-content {
@@ -195,32 +206,39 @@ body > * {
     max-width: 350px;
 }
 
-
-.feature-image{
+.feature-image {
     height: 300px;
+    min-height: 300px;
     overflow: hidden;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #ffffff12;
+    background: #090b07;
+    box-shadow: 0 8px 30px #00000050;
+    transition: .3s ease;
 }
-
 
 .feature-image img {
     width: 100%;
     height: 100%;
+    max-height: 300px;
     object-fit: contain;
     display: block;
+    transition: transform .4s ease;
 }
 
+.feature-main:hover .feature-image img {
+    transform: scale(1.03);
+}
 
-.small-features{
+.small-features {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 14px;
     margin-top: 25px;
 }
-
 
 .small-feature {
     background: #151713;
@@ -231,8 +249,9 @@ body > * {
 }
 
 .small-feature:hover {
+    background: #191e12;
+    border-color: #8fcf3870;
     transform: translateY(-4px);
-    border-color: #b5ed4570;
 }
 
 .small-feature h3 {
@@ -248,16 +267,123 @@ body > * {
 }
 
 
-.feature-image {
-    min-height: 300px;
-    overflow: hidden;
-    border-radius: 10px;
+.section-heading {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 45px;
 }
 
-.feature-image img {
-    width: 100%;
-    height: 100%;
-    max-height: 300px;
-    object-fit: contain;
-    display: block;
+.section-heading h2 {
+    margin: 0 0 12px;
 }
+
+.section-heading p {
+    margin: 0;
+}
+
+.comparison-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 950px;
+    margin: auto;
+    padding: 35px;
+    background:linear-gradient(125deg, #000000, #31451d);
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.comparison-side h3 {
+    font-size: 20px;
+    margin: 0 0 28px;
+}
+
+
+.comparison-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.comparison-item span {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 70%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.settings .comparison-item span{
+    color: #ff6565;
+    background:#ff65651a;
+}
+
+.dozeguard .comparison-item span{
+    color: rgb(0, 20, 236);
+    background: rgba(122, 208, 139, 0.711);
+}
+
+
+
+.linux-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    vertical-align: middle;
+    background: transparent;
+}
+
+
+
+.how-it-works{
+    max-width: 1000px;
+    margin: 100px auto 80px;
+    padding: 0 25px;
+}
+
+.steps{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+
+.step {
+    padding: 25px;
+    background: #151713;
+    border: 1px solid #ffffff12;
+    border-radius: 12px;
+    transition: .3s ease;
+}
+
+.step:hover{
+    transform: translateY((-5px));
+    border-color: #8fcf3870;    
+}
+
+.step span {
+    color: #b5ed45;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.step h3 {
+    font-size: 17px;
+    margin: 20px 0 10px;
+}
+
+.step p {
+    color: #92948c;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+
+
