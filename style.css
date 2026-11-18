@@ -741,8 +741,6 @@ body > * {
     background: transparent;
 }
 
-
-
 .how-it-works{
     max-width: 1050px;
     margin: 100px auto;
@@ -854,7 +852,6 @@ body > * {
     transition-delay: .4s;
 }
 
-
 .how-it-works .step h3{
     position: relative;
     display: block;
@@ -935,4 +932,32 @@ body > * {
 
 .step:nth-child(3) {
     transition-delay: .4s;
+}
+
+
+.timeline-line {
+    position: absolute;
+    top: 19px;
+    left: 16%;
+    width: 68%;
+    height: 2px;
+    background: #ffffff15;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.timeline-progress {
+    width: 0%;
+    height: 100%;
+    background: #b5ed45;
+    box-shadow: 0 0 10px #b5ed45, 0 0 20px #a8e639;
+    transition: width 2s ease;
+}
+
+.steps.active .timeline-progress {
+    width: 100%;
+}
+
+.step {
+    z-index: 1;
 }
