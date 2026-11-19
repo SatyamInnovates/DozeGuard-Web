@@ -29,29 +29,27 @@ body::before {
     pointer-events: none;
 }
 
-body::after {
+.hero::after {
     content: "";
     position: absolute;
-    top: -650px;
+    top: -950px;
     left: -20%;
     width: 150%;
     height: 1100px;
     border-bottom: 5px solid #b5ed45;
     border-radius: 50%;
-    transform: rotate(10deg) scaleY(-1);
+    transform: rotate(5deg) scaleY(-1);
     box-shadow:
-        0 0 8px #b5ed45,
-        0 0 25px #a8e639,
-        0 0 65px #8bcf35;
+        0 0 5px #b5ed45,
+        0 0 15px #a8e639,
+        0 0 30px #8bcf35;
     opacity: 1;
     pointer-events: none;
     z-index: 0;
-    transition: transform .8s ease;
 }
 
-body:has(.btn-primary:hover)::after {
-    transform: rotate(-20deg) scaleY(-1);
-}
+
+
 
 body > * {
     position: relative;
@@ -67,14 +65,24 @@ body > * {
 .hero {
     margin: 130px 20px 22px;
     text-align: center;
+    position: relative;
 }
 
+.hero {
+    position: relative;
+    isolation: isolate;
+}
 .hero h1 {
     font-size: clamp(48px, 7vw, 78px);
     line-height: 1;
     letter-spacing: -4px;
     font-weight: 800;
     text-transform: uppercase;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 .highlight {
@@ -427,38 +435,20 @@ body::before {
         #19230b 40%,
         transparent 72%
     );
+
     filter: blur(65px);
     opacity: .7;
     pointer-events: none;
 }
 
-body::after {
-    content: "";
-    position: absolute;
-    top: -650px;
-    left: -20%;
-    width: 150%;
-    height: 1100px;
-    border-bottom: 5px solid #b5ed45;
-    border-radius: 50%;
-    transform: rotate(10deg) scaleY(-1);
-    box-shadow:
-        0 0 8px #b5ed45,
-        0 0 25px #a8e639,
-        0 0 65px #8bcf35;
-    opacity: 1;
-    pointer-events: none;
-    z-index: 0;
-    transition: transform .8s ease;
-}
-
-body:has(.btn-primary:hover)::after {
-    transform: rotate(-10deg) scaleY(-1);
-}
 
 body > * {
     position: relative;
     z-index: 1;
+}
+.hero {
+    position: relative;
+    isolation: isolate;
 }
 
 .eyebrow {
@@ -934,7 +924,6 @@ body > * {
     transition-delay: .4s;
 }
 
-
 .timeline-line {
     position: absolute;
     top: 19px;
@@ -943,21 +932,43 @@ body > * {
     height: 2px;
     background: #ffffff15;
     z-index: 0;
-    overflow: hidden;
 }
 
 .timeline-progress {
     width: 0%;
     height: 100%;
     background: #b5ed45;
-    box-shadow: 0 0 10px #b5ed45, 0 0 20px #a8e639;
-    transition: width 2s ease;
+    box-shadow:
+        0 0 8px #b5ed45,
+        0 0 20px #a8e639,
+        0 0 35px #a8e639;
+    transition: width 2s cubic-bezier(.22, 1, .36, 1);
 }
 
 .steps.active .timeline-progress {
     width: 100%;
 }
 
+
 .step {
     z-index: 1;
 }
+
+.timeline-progress {
+    position: relative;
+}
+
+.timeline-progress:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top :50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 10px #b5ed45,0 0 20px #b5ed45;
+    transform: translate(50%,-50%);
+}
+
+
