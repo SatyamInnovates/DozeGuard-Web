@@ -18,3 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 );
 
 
+const hero = document.querySelector('.hero');
+const actions = document.querySelector('.actions');
+
+actions.addEventListener('mouseenter', () => {
+    hero.classList.add('curve-active');
+});
+
+actions.addEventListener('mouseleave', () => {
+    hero.classList.remove('curve-active');
+});

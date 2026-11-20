@@ -29,6 +29,7 @@ body::before {
     pointer-events: none;
 }
 
+
 .hero::after {
     content: "";
     position: absolute;
@@ -46,10 +47,17 @@ body::before {
     opacity: 1;
     pointer-events: none;
     z-index: 0;
+    transition: transform 0.6s ease-in-out;
 }
 
 
+.hero::after {
+    transition: transform 0.6s ease-in-out;
+}
 
+.hero.curve-active::after {
+    transform: rotate(-10deg) scaleY(-1);
+}
 
 body > * {
     position: relative;
