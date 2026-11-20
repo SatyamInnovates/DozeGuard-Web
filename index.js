@@ -28,3 +28,5 @@ actions.addEventListener('mouseenter', () => {
 actions.addEventListener('mouseleave', () => {
     hero.classList.remove('curve-active');
 });
+
+
