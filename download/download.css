@@ -18,6 +18,7 @@
     color: #b5ed45;
 }
 
+
 .download-header nav {
     display: flex;
     gap: 28px;
@@ -37,7 +38,7 @@
 
 .download-hero {
     text-align: center;
-    padding: 115px 20px 90px;
+    padding: 11px 2px 9px;
 }
 
 .download-label,
@@ -101,6 +102,7 @@
     margin: 15px 0 10px;
 }
 
+
 .download-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -116,11 +118,12 @@
 }
 
 
-
 .download-card h3,
 .install-card h3 {
     margin: 22px 0 10px;
 }
+
+
 
 .download-card p,
 .install-card p {
@@ -139,7 +142,6 @@
     color: #170239;
     text-decoration: none;
     font-size: 13px;
-    cursor: not-allowed;
 }
 
 .package-type {
@@ -161,10 +163,12 @@
     border-radius: 12px;
 }
 
+
 .github-release p {
     color: #aaa99f;
     font-size: 13px;
 }
+
 
 .github-release a {
     color: #b5ed45;
@@ -183,7 +187,7 @@
 .install-card pre {
     overflow-x: auto;
     padding: 17px;
-    background: #050604;
+    background: #0b0d0a;
     border: 1px solid #252a1d;
     border-radius: 8px;
     color: #b5ed45;
@@ -192,16 +196,26 @@
 .download-footer {
     text-align: center;
     padding: 80px 20px;
+    border: 1px solid #8fdd10;
+    padding: 18px;
+    border-radius: 8px;
 }
 
 .download-footer p {
-    color: #aaa99f;
+    color: #46e31b;
 }
 
 .download-footer a {
-    display: inline-block;
-    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 25px;
+    background: greenyellow;
+    font-size: 13px;
+    color: red;
 }
+
+
+
 
 footer {
     padding: 25px;
