@@ -10,7 +10,10 @@ Is is mainly desgined for long running tasks so you can do other stuff or be whi
 <img width="1900" height="921" alt="image" src="https://github.com/user-attachments/assets/a8066c75-d3f3-4bc7-9615-7181b7c2a087" />
 
 
-What's Inside?
+I though that downloading a tool from a website seems more better than Github so i made this website!
+
+
+**Stack**
 
 Landing Page – Introduction to DozeGuard and its purpose.
 
@@ -31,7 +34,7 @@ Build with
 
 
 
-## 💻 Run Locally
+## Run Locally
 
 Want to explore or work on the website?
 
