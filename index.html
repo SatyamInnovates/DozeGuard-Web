@@ -18,8 +18,35 @@
             <a href="#features">Features</a>
             <a href="https://www.github.com/SatyamInnovates/DozeGuard">Github ↗</a>
             <a href="/download" class="nav-download">Download</a>
+            <div class="user-menu" id="user-menu">
+
+                <button class="user-icon" id="user-icon">
+                    <i data-lucide="user"></i>
+                </button>
+
+                <div class="user-dropdown" id="user-dropdown">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i data-lucide="user-email"></i>
+                        </div>
+
+                        <div class="user-details">
+                            <span>Signed in as</span>
+                            <p id="user-email"></p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                    <button id="logout-btn" class="logout-btn">
+                        <i data-lucide="log-out"></i>
+                        <span>Log out</span>
+                    </button>
+                </div>
+
+            </div>
         </nav>
     </header>
+
 
     <header class="hero" id="top">
         <h1>
@@ -281,7 +308,10 @@
             </div>
         </div>
     </section>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
+
+
+
 
