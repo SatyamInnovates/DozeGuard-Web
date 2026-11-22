@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DozeGuard: Authentication</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    
+    <header class="navbar">
+        <a href="/" class="nav-logo">
+            DozeGuard<span>.</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="https://www.github.com/SatyamInnovates/DozeGuard">Github ↗</a>
+            <a href="/download" class="nav-download">Download</a>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-card">
+
+            <div class="auth-header">
+                <h1>Welcome</h1>
+                <p>Sign in to continue to DozeGuard</p>
+            </div>
+
+            <form id="auth-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="xyz@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                </div>
+                <button type="submit" id="auth-submit">Log In</button>
+            </form>
+
+
+            <p class="auth-switch">
+                Don't have a account?
+                <button type="button" id="toggle-auth">Sign up</button>
+            </p>
+
+            <p id="auth-message"></p>
+        </div>
+    </main>
+</body>
+</html>

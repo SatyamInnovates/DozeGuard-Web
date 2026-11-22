@@ -48,3 +48,4 @@ faqItems.forEach((item) => {
     });
     lucide.createIcons();
 })
+
