@@ -40,8 +40,9 @@ Want to explore or work on the website?
 
 1. Clone the repository:
 
+
 ```bash
-git clone https://github.com/SatyamInnovates/DozeGuard-Web.git
+git clone git@github.com:SatyamInnovates/DozeGuard-Web.git
 ```
 
 2. Open the project folder in VS Code.
