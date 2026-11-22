@@ -6,7 +6,7 @@ DozeGuard is a Linux desktop application that keeps your computer awake whenever
 
 Is is mainly desgined for long running tasks so you can do other stuff or be while your ai agents work or a game downloads!
 
-Website Link : ["https://dozeguard.vercel.app/"](DozeGuard)
+[Visit DozeGuard Website](https://dozeguard.vercel.app/)
 <img width="1900" height="921" alt="image" src="https://github.com/user-attachments/assets/a8066c75-d3f3-4bc7-9615-7181b7c2a087" />
 
 
